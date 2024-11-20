@@ -1,0 +1,138 @@
+
+body {
+    font-family: "Poppins", serif;
+}
+.navbar, footer {
+    background-color: #b38758;
+}
+.hero-section {
+    background: url('ruta/a/imagen-de-hero.jpg') center center/cover no-repeat;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.gallery-section, .services-section, .why-choose-section {
+    margin-top: 5vh;
+    padding: 30px 0;
+    text-align: center;
+}
+.gallery-section .card {
+    border: none;
+}
+.icon-section i {
+    font-size: 40px;
+    color: #b38758;
+}
+footer {
+    padding: 20px;
+    color: #fff;
+}
+
+/* Ajustar el tamaño de los contenedores de servicios */
+.services-section .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ajustar el tamaño de las imágenes en servicios */
+.services-section .service-img {
+    max-height: 150px; /* Ajustar la altura máxima */
+    object-fit: cover; /* Ajustar para que la imagen no se deforme */
+    width: auto;
+    border-radius: 3pt;
+}
+
+/* Asegurar que todas las tarjetas tengan el mismo tamaño */
+.gallery-section .card {
+    height: 400px; /* Altura fija */
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    
+}
+
+/* Imágenes dentro de las tarjetas */
+/* Estilo base */
+.services-section.container {
+    padding: 2rem;
+}
+
+.services-wrapper {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Espacio entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva línea si es necesario */
+    margin-bottom: 10vh;
+}
+
+.gallery-section .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Escalar manteniendo proporciones */
+    border-radius: 8px; /* Bordes redondeados para un diseño moderno */
+}
+
+/* Títulos dentro de las tarjetas */
+.gallery-section .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery-section .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .services-wrapper {
+        flex-direction: column; /* Apilar elementos en una columna */
+        align-items: stretch; /* Ajustar al ancho completo del contenedor */
+        margin-top: 2vh;
+    }
+
+    .gallery-section .card-title {
+        font-size: 1.2rem; /* Reducir tamaño de texto */
+    }
+
+    @media screen and (max-width: 768px) {
+        section{
+            padding: 10% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-section.container {
+        padding: 1rem; /* Reducir relleno en dispositivos pequeños */
+    }
+
+    .gallery-section .card-title {
+        font-size: 1rem;
+    }
+}

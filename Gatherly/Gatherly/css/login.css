@@ -1,0 +1,143 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", serif;
+    background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.705);
+    backdrop-filter: blur(8px);
+}
+.login-container {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10rem !important;
+}
+.login-container h2 {
+    color: #b38758;
+    font-weight: bold;
+}
+.admin-badge {
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #b38758;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+}
+footer {
+    background-color: #b38758;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3); /* Opcional para oscurecer */
+}
+
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece con un color negro al 50% */
+    z-index: 1; /* Asegura que esté encima del fondo */
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Formulario */
+.form-label {
+    color: #333;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: #b38758;
+    box-shadow: 0 0 5px rgba(179, 135, 88, 0.5);
+}
+
+.btn-login {
+    background-color: #b38758;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #a5714d;
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 100% !important;
+    border-radius: 0 !important;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+        margin-top: 8rem !important;
+    }
+
+    .btn-login {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+
+

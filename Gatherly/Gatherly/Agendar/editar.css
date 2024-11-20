@@ -1,0 +1,81 @@
+:root {
+  --brown-dark: #734E38;
+  --brown-light: #A67538;
+  --tan: #BF9663;
+  --white: #F2F2F2;
+  --black: #212121;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: var(--tan);
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--brown-dark);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--white) !important;
+}
+
+.nav-link:hover {
+  color: var(--tan) !important;
+}
+
+.form-container {
+  background-color: var(--white);
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: var(--brown-dark);
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--brown-dark);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid var(--tan);
+  border-radius: 5px;
+}
+
+#guardar {
+  background-color: var(--brown-dark);
+  color: var(--white);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+} 
+
+button:hover {
+  background-color: var(--brown-light);
+}
+
+@media (max-width: 576px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
